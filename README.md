@@ -1,6 +1,6 @@
 # BRC simple cipher
 
-This is a proof-of-concept of BRC(Bogdan's Replace Cipher) simple substitution cipher. This proof-of-concept doesnt work with unicode
+This is a proof-of-concept of BRC (Bum's Replace Cipher) simple substitution cipher.
 
 ## The main idea
 The main idea of this cipher is replace the original letter to random symbols separated by some delimiter. Delimiter is calculated based on numebr of letters in non-encrypted text. It's only a raw idea and maybe we improve this cipher in the future. Or not

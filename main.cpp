@@ -119,11 +119,26 @@ bool decrypt(std::string text, const std::string &fileName) {
     text = text.substr(text.find("[Bc]") + 4);
     text = text.substr(0, text.find("[/Bc]"));
 
+    std::string decrypted;
+
     for (int i = 0; i < charNumber - 1; ++i) {
-        ofs << static_cast<char>(text.find(key));
+        char ch;
+
+        if (text[0] != '-') {
+            ch = static_cast<char>(text.find(key));
+        } else {
+            ch = static_cast<char>(static_cast<int>(text.find(key) - 1) * -1);
+        }
+
+        decrypted.append(&ch);
 
         text = text.substr(text.find(key) + key.length());
     }
+
+    decrypted.resize(static_cast<unsigned long>(charNumber - 1));
+    for (int j : decrypted);
+
+    ofs << decrypted;
 
     return true;
 }
@@ -138,7 +153,13 @@ long readFooter(const std::string &text) {
 }
 
 char getRandomChar() {
-    return static_cast<char>((random() % 127) - 33);
+    auto ch = static_cast<char>((random() % 127) - 33);
+
+    while (ch == '-') {
+        ch = static_cast<char>((random() % 127) - 33);
+    }
+
+    return ch;
 }
 
 std::string genereateHeader(const std::string &text, std::fstream &ofs) {
@@ -170,8 +191,16 @@ bool encrypt(std::string text, const std::string &fileName) {
     long charCounter = 0;
 
     for (int i = 0; i < text.length(); i++) {
-        for (int k = 0; k < static_cast<int>(text[i]); k++) {
-            ofs << getRandomChar();
+        if (static_cast<int>(text[i]) > 0) {
+            for (int k = 0; k < static_cast<int>(text[i]); k++) {
+                ofs << getRandomChar();
+            }
+        } else {
+            ofs << "-";
+
+            for (int k = 0; k < static_cast<int>(text[i]) * -1; k++) {
+                ofs << getRandomChar();
+            }
         }
 
         if (i < text.length() - 1) {
