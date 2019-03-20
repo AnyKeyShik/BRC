@@ -18,10 +18,9 @@ This is a proof-of-concept of BRC (Bum's Replace Cipher) simple substitution cip
 #### Requirements
 
 To compile and run this project, you will need:
-* the NASM assembler
-* the GNU linker
-* GRUB bootloader
-* a Linux x64 operating system
+* GNU G++ compiler
+* CMake
+* GNU make 
 
 #### Running the code
 
