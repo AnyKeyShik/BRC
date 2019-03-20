@@ -3,7 +3,7 @@ project(BRС)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(.)
+include_directories(include src)
 
 add_executable(BRC
-        main.cpp)
+        main.cpp src/crypto.cpp include/crypto.h src/utils.cpp include/utils.h)
