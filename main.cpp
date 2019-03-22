@@ -18,7 +18,7 @@ int main(int argc, char** argv)
             {
                 if ( decrypt(inputText) )
                 {
-                    std::cout << "Decrypted successfully!" << std::endl;
+                    std::cout << "Decrypted successfully! Result write to decryptedText" << std::endl;
                 }
                 else
                 {
@@ -29,7 +29,7 @@ int main(int argc, char** argv)
             {
                 if ( encrypt(inputText) )
                 {
-                    std::cout << "Encrypted successfully!" << std::endl;
+                    std::cout << "Encrypted successfully! Result write to encryptedText" << std::endl;
                 }
                 else
                 {
@@ -54,7 +54,7 @@ int main(int argc, char** argv)
             {
                 if ( decrypt(inputText, std::string(argv[3])) )
                 {
-                    std::cout << "Decrypted successfully!" << std::endl;
+                    std::cout << "Decrypted successfully! Result write to " << argv[3] << std::endl;
                 }
                 else
                 {
@@ -65,7 +65,7 @@ int main(int argc, char** argv)
             {
                 if ( encrypt(inputText, std::string(argv[3])) )
                 {
-                    std::cout << "Encrypted successfully!" << std::endl;
+                    std::cout << "Encrypted successfully! Result write to " << argv[3] << std::endl;
                 }
                 else
                 {

@@ -4,8 +4,8 @@
 #include <cstring>
 #include <fstream>
 #include <sstream>
-
-#include <iostream>
+#include <locale>
+#include <codecvt>
 
 std::string readHeader(const std::string &);
 
