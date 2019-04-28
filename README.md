@@ -1,12 +1,12 @@
 # BRC simple cipher
 
-<a href="https://github.com/AnyKeyShik/SimpleKernel/blob/master/LICENSE">
+<a href="https://github.com/AnyKeyShik/BRC/blob/master/LICENSE">
 <img src ="https://img.shields.io/github/license/AnyKeyShik/BRC.svg" />
 </a>
-<a href="https://github.com/AnyKeyShik/SimpleKernel/stargazers">
+<a href="https://github.com/AnyKeyShik/BRC/stargazers">
 <img src ="https://img.shields.io/github/stars/AnyKeyShik/BRC.svg" />
 </a>
-<a href="https://github.com/AnyKeyShik/SimpleKernel/network">
+<a href="https://github.com/AnyKeyShik/BRC/network">
 <img src ="https://img.shields.io/github/forks/AnyKeyShik/BRC.svg" />
 </a>
 
